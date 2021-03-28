@@ -8,11 +8,13 @@ public class TestSpring {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 "applicationContext.xml");
 
-       // создаем объект - реализует интерфейс
-       Music music =  context.getBean("musicBean", Music.class );
+        //убираем  больше не нужно создавать в ручную
 
-       // внедрение зависимостей вречную в конструктор
-        MusicPlayer musicPlayer = new MusicPlayer(music);
+       // Music music =  context.getBean("musicBean", Music.class ); создаем объект - реализует интерфейс
+       // MusicPlayer musicPlayer = new MusicPlayer(music); внедрение зависимостей вручную в конструктор
+
+        //теперь обращаемся к контексту для получения
+        MusicPlayer musicPlayer = context.getBean("musicPlayer",MusicPlayer.class);
         musicPlayer.playMusic();
         // System.out.println(music.getSong());
 

@@ -9,7 +9,13 @@
 
     <bean id="musicBean"
           class="ru.kseniia.springcourse.RockMusic">
+    </bean>
+
+    <bean id = "musicPlayer"
+    class="ru.kseniia.springcourse.MusicPlayer">
+        <constructor-arg ref="musicBean"/>
 
     </bean>
+
 
 </beans>
