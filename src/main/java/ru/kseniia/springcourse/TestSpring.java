@@ -18,6 +18,11 @@ public class TestSpring {
         musicPlayer.playMusic();
         // System.out.println(music.getSong());
 
+        //получаем зависимости
+        System.out.println(musicPlayer.getName());
+        System.out.println(musicPlayer.getVolume());
+
+
         // обязательно закрываем
         context.close();
     }

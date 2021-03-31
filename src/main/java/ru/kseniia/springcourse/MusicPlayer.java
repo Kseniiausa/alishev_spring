@@ -3,6 +3,27 @@ package ru.kseniia.springcourse;
 public class MusicPlayer {
     private Music music; // в качестве зависимости интерфейс
 
+    //внедрим 2 поля и сеттеры + геттеры
+    private String name;
+    private int volume;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setVolume(int volume) {
+        this.volume = volume;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getVolume() {
+        return volume;
+    }
+
+
     // IoC
     public MusicPlayer(Music music) {
         this.music = music;
